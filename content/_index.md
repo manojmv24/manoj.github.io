@@ -7,7 +7,7 @@ type: landing
 
 design:
   # Default section spacing
-  spacing: '6rem'
+  spacing: '0.5rem'
 
 sections:
   - block: resume-biography-3
@@ -28,6 +28,10 @@ sections:
       background:
         gradient_mesh:
           enable: true
+      
+      # Reduce top spacing
+      spacing:
+        padding: ['20px', '0', '20px', '0']
 
       # Name heading sizing to accommodate long or short names
       name:
@@ -108,6 +112,42 @@ sections:
       # Reduce spacing
       spacing:
         padding: [0, 0, 0, 0]
+  - block: resume-experience
+    id: experience
+    content:
+      username: me
+    design:
+      date_format: 'January 2006'
+      is_education_first: false
+  - block: collection
+    id: projects
+    content:
+      title: Selected Projects
+      text: ''
+      filters:
+        folders:
+          - projects
+    design:
+      view: article-grid
+      fill_image: false
+      columns: 3
+      show_date: false
+      show_read_time: false
+      show_read_more: false
+  - block: collection
+    id: courses
+    content:
+      title: Courses
+      filters:
+        tag: Course
+        kinds:
+          - section
+    design:
+      view: article-grid
+      show_read_time: false
+      show_date: false
+      show_read_more: false
+      columns: 1
   - block: cta-card
     demo: true # Only display this section in the HugoBlox Kit demo site
     content:
