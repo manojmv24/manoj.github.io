@@ -105,11 +105,647 @@ html body .role,
     gap: 2rem !important;
 }
 
+/* Awards section with 3 columns */
+#awards .grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 1.5rem !important;
+}
+
 @media (max-width: 768px) {
 
     #consultancy .grid,
     #incubation .grid,
-    #funded-projects .grid {
+    #funded-projects .grid,
+    #awards .grid {
         grid-template-columns: 1fr !important;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    #awards .grid {
+        grid-template-columns: repeat(2, 1fr) !important;
+    }
+}
+
+/* Publications section styling */
+#publications {
+    background: #f8fafc;
+    padding: 2rem;
+}
+
+#publications .section-heading {
+    color: #1e40af;
+    border-bottom: 3px solid #3b82f6;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Year group headers */
+#publications h3.year-heading,
+#publications .group-heading {
+    color: #1e40af;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem 1rem;
+    border-left: 4px solid #3b82f6;
+    background: rgba(59, 130, 246, 0.05);
+}
+
+/* First year group - remove top margin */
+#publications h3.year-heading:first-of-type,
+#publications .group-heading:first-of-type {
+    margin-top: 1rem;
+}
+
+/* Individual publication styling */
+#publications .citation,
+#publications article {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+    border-radius: 8px;
+    border-left: 3px solid #3b82f6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+#publications .citation:hover,
+#publications article:hover {
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.12);
+    transform: translateX(4px);
+}
+
+/* Publication title */
+#publications .article-title,
+#publications .citation-title {
+    color: #1e40af;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+#publications .article-title a,
+#publications .citation-title a {
+    color: #1e40af;
+    text-decoration: none;
+}
+
+#publications .article-title a:hover,
+#publications .citation-title a:hover {
+    color: #3b82f6;
+}
+
+/* Authors styling */
+#publications .article-metadata,
+#publications .authors {
+    color: #475569;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+/* Publication venue */
+#publications .publication,
+#publications .venue {
+    color: #64748b;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+/* DOI and links */
+#publications .doi,
+#publications .btn-links,
+#publications a[href^="https://doi.org"],
+#publications a[href^="http://www.techscience.com"],
+#publications a[href^="https://www.frontiersin.org"] {
+    color: #3b82f6;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+#publications .doi:hover,
+#publications a[href^="https://doi.org"]:hover,
+#publications a[href^="http://www.techscience.com"]:hover,
+#publications a[href^="https://www.frontiersin.org"]:hover {
+    color: #1e40af;
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    #publications {
+        padding: 1rem;
+    }
+
+    #publications .citation,
+    #publications article {
+        padding: 1rem;
+    }
+
+    #publications h3.year-heading,
+    #publications .group-heading {
+        font-size: 1.5rem;
+    }
+}
+
+/* Conferences section styling - inherit publications styles */
+#conferences {
+    background: #f8fafc;
+    padding: 2rem;
+}
+
+#conferences .section-heading {
+    color: #1e40af;
+    border-bottom: 3px solid #3b82f6;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+#conferences h3.year-heading,
+#conferences .group-heading {
+    color: #1e40af;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem 1rem;
+    border-left: 4px solid #3b82f6;
+    background: rgba(59, 130, 246, 0.05);
+}
+
+#conferences h3.year-heading:first-of-type,
+#conferences .group-heading:first-of-type {
+    margin-top: 1rem;
+}
+
+#conferences .citation,
+#conferences article {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+    border-radius: 8px;
+    border-left: 3px solid #3b82f6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+#conferences .citation:hover,
+#conferences article:hover {
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.12);
+    transform: translateX(4px);
+}
+
+#conferences .article-title,
+#conferences .citation-title {
+    color: #1e40af;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+#conferences .article-title a,
+#conferences .citation-title a {
+    color: #1e40af;
+    text-decoration: none;
+}
+
+#conferences .article-title a:hover,
+#conferences .citation-title a:hover {
+    color: #3b82f6;
+}
+
+#conferences .article-metadata,
+#conferences .authors {
+    color: #475569;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+#conferences .publication,
+#conferences .venue {
+    color: #64748b;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+#conferences .doi,
+#conferences .btn-links,
+#conferences a[href^="https://doi.org"],
+#conferences a[href^="http://ceur-ws.org"],
+#conferences a[href^="https://ieeexplore.ieee.org"],
+#conferences a[href^="https://dl.acm.org"],
+#conferences a[href^="https://publications.waset.org"],
+#conferences a[href^="https://link.springer.com"],
+#conferences a[href^="http://www.gjesr.com"] {
+    color: #3b82f6;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+#conferences .doi:hover,
+#conferences a[href^="https://doi.org"]:hover,
+#conferences a[href^="http://ceur-ws.org"]:hover,
+#conferences a[href^="https://ieeexplore.ieee.org"]:hover,
+#conferences a[href^="https://dl.acm.org"]:hover,
+#conferences a[href^="https://publications.waset.org"]:hover,
+#conferences a[href^="https://link.springer.com"]:hover,
+#conferences a[href^="http://www.gjesr.com"]:hover {
+    color: #1e40af;
+}
+
+@media (max-width: 768px) {
+    #conferences {
+        padding: 1rem;
+    }
+
+    #conferences .citation,
+    #conferences article {
+        padding: 1rem;
+    }
+
+    #conferences h3.year-heading,
+    #conferences .group-heading {
+        font-size: 1.5rem;
+    }
+}
+
+/* Book Chapters section styling - inherit publications styles */
+#book-chapters {
+    background: #f8fafc;
+    padding: 2rem;
+}
+
+#book-chapters .section-heading {
+    color: #1e40af;
+    border-bottom: 3px solid #3b82f6;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+#book-chapters h3.year-heading,
+#book-chapters .group-heading {
+    color: #1e40af;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem 1rem;
+    border-left: 4px solid #3b82f6;
+    background: rgba(59, 130, 246, 0.05);
+}
+
+#book-chapters h3.year-heading:first-of-type,
+#book-chapters .group-heading:first-of-type {
+    margin-top: 1rem;
+}
+
+#book-chapters .citation,
+#book-chapters article {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+    border-radius: 8px;
+    border-left: 3px solid #3b82f6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+#book-chapters .citation:hover,
+#book-chapters article:hover {
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.12);
+    transform: translateX(4px);
+}
+
+#book-chapters .article-title,
+#book-chapters .citation-title {
+    color: #1e40af;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+#book-chapters .article-title a,
+#book-chapters .citation-title a {
+    color: #1e40af;
+    text-decoration: none;
+}
+
+#book-chapters .article-title a:hover,
+#book-chapters .citation-title a:hover {
+    color: #3b82f6;
+}
+
+#book-chapters .article-metadata,
+#book-chapters .authors {
+    color: #475569;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+#book-chapters .publication,
+#book-chapters .venue {
+    color: #64748b;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+#book-chapters .doi,
+#book-chapters .btn-links,
+#book-chapters a[href^="https://doi.org"],
+#book-chapters a[href^="https://link.springer.com"],
+#book-chapters a[href^="https://www.sciencedirect.com"],
+#book-chapters a[href^="https://www.routledge.com"],
+#book-chapters a[href^="https://www.degruyter.com"] {
+    color: #3b82f6;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+#book-chapters .doi:hover,
+#book-chapters a[href^="https://doi.org"]:hover,
+#book-chapters a[href^="https://link.springer.com"]:hover,
+#book-chapters a[href^="https://www.sciencedirect.com"]:hover,
+#book-chapters a[href^="https://www.routledge.com"]:hover,
+#book-chapters a[href^="https://www.degruyter.com"]:hover {
+    color: #1e40af;
+}
+
+@media (max-width: 768px) {
+    #book-chapters {
+        padding: 1rem;
+    }
+
+    #book-chapters .citation,
+    #book-chapters article {
+        padding: 1rem;
+    }
+
+    #book-chapters h3.year-heading,
+    #book-chapters .group-heading {
+        font-size: 1.5rem;
+    }
+}
+
+/* Edited Books section styling - inherit publications styles */
+#edited-books {
+    background: #f8fafc;
+    padding: 2rem;
+}
+
+#edited-books .section-heading {
+    color: #1e40af;
+    border-bottom: 3px solid #3b82f6;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+#edited-books h3.year-heading,
+#edited-books .group-heading {
+    color: #1e40af;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+    padding: 0.75rem 1rem;
+    border-left: 4px solid #3b82f6;
+    background: rgba(59, 130, 246, 0.05);
+}
+
+#edited-books h3.year-heading:first-of-type,
+#edited-books .group-heading:first-of-type {
+    margin-top: 1rem;
+}
+
+#edited-books .citation,
+#edited-books article {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+    border-radius: 8px;
+    border-left: 3px solid #3b82f6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+#edited-books .citation:hover,
+#edited-books article:hover {
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.12);
+    transform: translateX(4px);
+}
+
+#edited-books .article-title,
+#edited-books .citation-title {
+    color: #1e40af;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+#edited-books .article-title a,
+#edited-books .citation-title a {
+    color: #1e40af;
+    text-decoration: none;
+}
+
+#edited-books .article-title a:hover,
+#edited-books .citation-title a:hover {
+    color: #3b82f6;
+}
+
+#edited-books .article-metadata,
+#edited-books .authors {
+    color: #475569;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+#edited-books .publication,
+#edited-books .venue {
+    color: #64748b;
+    font-style: italic;
+    font-size: 0.9rem;
+    margin-bottom: 0.5rem;
+}
+
+#edited-books .doi,
+#edited-books .btn-links,
+#edited-books a[href^="https://doi.org"],
+#edited-books a[href^="https://www.igi-global.com"],
+#edited-books a[href^="https://www.frontiersin.org"] {
+    color: #3b82f6;
+    font-size: 0.875rem;
+    text-decoration: none;
+}
+
+#edited-books .doi:hover,
+#edited-books a[href^="https://doi.org"]:hover,
+#edited-books a[href^="https://www.igi-global.com"]:hover,
+#edited-books a[href^="https://www.frontiersin.org"]:hover {
+    color: #1e40af;
+}
+
+@media (max-width: 768px) {
+    #edited-books {
+        padding: 1rem;
+    }
+
+    #edited-books .citation,
+    #edited-books article {
+        padding: 1rem;
+    }
+
+    #edited-books h3.year-heading,
+    #edited-books .group-heading {
+        font-size: 1.5rem;
+    }
+}
+
+/* Professional Memberships section styling */
+#memberships {
+    background: #f8fafc;
+    padding: 2rem;
+}
+
+#memberships .section-heading {
+    color: #1e40af;
+    border-bottom: 3px solid #3b82f6;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+#memberships .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+#memberships .card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border-left: 4px solid #3b82f6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+}
+
+#memberships .card:hover {
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.12);
+    transform: translateY(-4px);
+}
+
+#memberships .card-title {
+    color: #1e40af;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.75rem;
+    line-height: 1.4;
+}
+
+#memberships .card-text {
+    color: #475569;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    #memberships {
+        padding: 1rem;
+    }
+
+    #memberships .grid {
+        grid-template-columns: 1fr;
+    }
+
+    #memberships .card {
+        padding: 1.25rem;
+    }
+}
+
+/* Foreign Visits section styling */
+#foreign-visits {
+    background: #f8fafc;
+    padding: 2rem;
+}
+
+#foreign-visits .section-heading {
+    color: #1e40af;
+    border-bottom: 3px solid #3b82f6;
+    padding-bottom: 1rem;
+    margin-bottom: 2rem;
+}
+
+#foreign-visits article {
+    background: white;
+    padding: 1.5rem;
+    margin-bottom: 1.25rem;
+    border-radius: 8px;
+    border-left: 4px solid #3b82f6;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+#foreign-visits article:hover {
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.12);
+    transform: translateX(4px);
+}
+
+#foreign-visits article::before {
+    content: '✈️';
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 1.5rem;
+    opacity: 0.3;
+}
+
+#foreign-visits .article-title {
+    color: #1e40af;
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+#foreign-visits .article-metadata {
+    color: #64748b;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+    font-style: italic;
+}
+
+#foreign-visits .article-metadata::before {
+    content: '📍 ';
+    font-size: 0.9rem;
+}
+
+#foreign-visits .summary {
+    color: #475569;
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    #foreign-visits {
+        padding: 1rem;
+    }
+
+    #foreign-visits article {
+        padding: 1.25rem;
+    }
+    
+    #foreign-visits article::before {
+        font-size: 1.2rem;
+        top: 1.25rem;
+        right: 1.25rem;
     }
 }

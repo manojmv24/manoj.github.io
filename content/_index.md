@@ -95,6 +95,118 @@ sections:
       spacing:
         padding: ['40px', '0', '40px', '0']
   
+  - block: collection
+    id: publications
+    content:
+      title: 📚 Journal Publications
+      text: ""
+      filters:
+        folders:
+          - publication
+        publication_type: 'article-journal'
+        exclude_featured: false
+      count: 0
+    design:
+      view: citation
+      columns: '1'
+      group_by: 'year'
+      spacing:
+        padding: ['40px', '0', '40px', '0']
+  
+  - block: collection
+    id: conferences
+    content:
+      title: 🎤 Conference Publications
+      text: ""
+      filters:
+        folders:
+          - conference
+        exclude_featured: false
+      count: 0
+    design:
+      view: citation
+      columns: '1'
+      group_by: 'year'
+      spacing:
+        padding: ['40px', '0', '40px', '0']
+  
+  - block: collection
+    id: book-chapters
+    content:
+      title: 📖 Book Chapters
+      text: ""
+      filters:
+        folders:
+          - book-chapter
+        exclude_featured: false
+      count: 0
+    design:
+      view: citation
+      columns: '1'
+      group_by: 'year'
+      spacing:
+        padding: ['40px', '0', '40px', '0']
+  
+  - block: collection
+    id: edited-books
+    content:
+      title: 📚 Edited Books
+      text: ""
+      filters:
+        folders:
+          - edited-book
+        exclude_featured: false
+      count: 0
+    design:
+      view: citation
+      columns: '1'
+      group_by: 'year'
+      spacing:
+        padding: ['40px', '0', '40px', '0']
+  
+  - block: collection
+    id: memberships
+    content:
+      title: 🏛️ Professional Memberships
+      filters:
+        folders:
+          - membership
+        featured_only: false
+    design:
+      columns: '2'
+      view: card
+      spacing:
+        padding: ['40px', '0', '40px', '0']
+  
+  - block: collection
+    id: foreign-visits
+    content:
+      title: ✈️ Foreign Visits for Research Interaction and Paper Presentation
+      filters:
+        folders:
+          - foreign-visit
+        featured_only: false
+    design:
+      columns: '1'
+      view: list
+      spacing:
+        padding: ['40px', '0', '40px', '0']
+  
+  - block: collection
+    id: awards
+    content:
+      title: 🏆 Best Research Paper Awards
+      filters:
+        folders:
+          - awards
+        featured_only: false
+    design:
+      columns: '3'
+      view: card
+      flip_alt_rows: false
+      spacing:
+        padding: ['40px', '0', '40px', '0']
+  
   - block: cta-card
     demo: true # Only display this section in the HugoBlox Kit demo site
     content:
