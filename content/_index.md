@@ -61,7 +61,6 @@ sections:
     design:
       columns: '2'
       view: article-grid
-      
       spacing:
         padding: ['40px', '0', '40px', '0']
   
@@ -108,7 +107,7 @@ sections:
       count: 0
     design:
       view: citation
-      columns: '1'
+      columns: 1
       group_by: 'year'
       spacing:
         padding: ['40px', '0', '40px', '0']
@@ -125,7 +124,7 @@ sections:
       count: 0
     design:
       view: citation
-      columns: '1'
+      columns: 1
       group_by: 'year'
       spacing:
         padding: ['40px', '0', '40px', '0']
@@ -142,7 +141,7 @@ sections:
       count: 0
     design:
       view: citation
-      columns: '1'
+      columns: 1
       group_by: 'year'
       spacing:
         padding: ['40px', '0', '40px', '0']
@@ -159,7 +158,7 @@ sections:
       count: 0
     design:
       view: citation
-      columns: '1'
+      columns: 1
       group_by: 'year'
       spacing:
         padding: ['40px', '0', '40px', '0']

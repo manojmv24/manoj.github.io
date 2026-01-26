@@ -8,6 +8,61 @@ html {
     scroll-margin-top: 80px;
 }
 
+/* Make citation view sections match the width of other sections */
+#publications .container,
+#conferences .container,
+#book-chapters .container,
+#edited-books .container {
+    max-width: 1000px !important;
+    margin: 0 auto !important;
+}
+
+/* Add box around each publication and justify text */
+#publications article,
+#publications .stream-item,
+#publications .hb-stream-item,
+#conferences article,
+#conferences .stream-item,
+#conferences .hb-stream-item,
+#book-chapters article,
+#book-chapters .stream-item,
+#book-chapters .hb-stream-item,
+#edited-books article,
+#edited-books .stream-item,
+#edited-books .hb-stream-item {
+    border: 2px solid #d1d5db !important;
+    border-radius: 8px !important;
+    padding: 20px !important;
+    margin-bottom: 20px !important;
+    background-color: #f9fafb !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1) !important;
+    text-align: justify !important;
+}
+
+#publications p,
+#conferences p,
+#book-chapters p,
+#edited-books p {
+    text-align: justify !important;
+}
+
+/* Dark mode support for publication boxes */
+html.dark #publications article,
+html.dark #publications .stream-item,
+html.dark #publications .hb-stream-item,
+html.dark #conferences article,
+html.dark #conferences .stream-item,
+html.dark #conferences .hb-stream-item,
+html.dark #book-chapters article,
+html.dark #book-chapters .stream-item,
+html.dark #book-chapters .hb-stream-item,
+html.dark #edited-books article,
+html.dark #edited-books .stream-item,
+html.dark #edited-books .hb-stream-item {
+    border-color: #4b5563 !important;
+    background-color: #374151 !important;
+}
+
 /* Reduce author name font size to prevent wrapping - more aggressive targeting */
 article h1:first-of-type,
 .biography h1,
