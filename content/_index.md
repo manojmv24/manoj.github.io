@@ -45,7 +45,6 @@ sections:
     id: experience
     content:
       username: me
-      # Add a custom heading if desired
       title: Experience
     design:
       spacing:
@@ -61,7 +60,8 @@ sections:
         featured_only: false
     design:
       columns: '2'
-      view: card
+      view: article-grid
+      
       spacing:
         padding: ['40px', '0', '40px', '0']
   
@@ -75,8 +75,8 @@ sections:
         featured_only: false
     design:
       columns: '2'
-      view: card
-      flip_alt_rows: false
+      view: article-grid
+      
       spacing:
         padding: ['40px', '0', '40px', '0']
   
@@ -90,8 +90,8 @@ sections:
         featured_only: false
     design:
       columns: '2'
-      view: card
-      flip_alt_rows: false
+      view: article-grid
+      
       spacing:
         padding: ['40px', '0', '40px', '0']
   
@@ -174,7 +174,8 @@ sections:
         featured_only: false
     design:
       columns: '2'
-      view: card
+      view: article-grid
+      
       spacing:
         padding: ['40px', '0', '40px', '0']
   
@@ -187,8 +188,9 @@ sections:
           - foreign-visit
         featured_only: false
     design:
-      columns: '1'
-      view: list
+      columns: 2
+      view: article-grid
+      fill_image: false
       spacing:
         padding: ['40px', '0', '40px', '0']
   
@@ -202,8 +204,8 @@ sections:
         featured_only: false
     design:
       columns: '3'
-      view: card
-      flip_alt_rows: false
+      view: article-grid
+      fill_image: false
       spacing:
         padding: ['40px', '0', '40px', '0']
   
